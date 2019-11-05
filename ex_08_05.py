@@ -14,9 +14,7 @@ count = 0
 
 for line in fh :
     line = line.rstrip()
-    if not line.startswith("From") :
-        continue
-    if line.startswith("From:") :
+    if not line.startswith("From") or line.startswith("From:") :
         continue
     sline = line.split()
     count = count + 1
